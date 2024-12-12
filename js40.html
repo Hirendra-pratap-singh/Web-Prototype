@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .container{
+
+            border: 2px solid red;
+            display: flex;
+            height: 80vh;
+            justify-content: center;
+            align-items:center;
+            flex-direction:row;
+            flex-wrap: wrap; 
+            
+        } */
+        /* .item{
+            
+            height: 92px;
+            width: 92px;
+            background-color: blueviolet;
+            border: 2px solid black;
+             margin: 4px;  */
+            /* align-content:flex-start;  */
+            /* flex-flow: nowrap; */
+            /* column-gap:40px; */
+
+        /* }
+        .order-5{
+
+            order: 1;
+        }
+        .order-4{
+
+            order: 2;
+        } */
+
+      .container{
+             
+        border: 2px solid black;
+        display: grid;
+         grid-template-columns: 120px 100px;  
+         grid-template-rows: 100px 100px 100px ; 
+
+      }
+        .items{
+           
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+
+        }
+        .item-4{
+
+            grid-row: 1/2;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            grid-column: 1/2;
+        }
+       .item-1{
+          
+        grid-row-start: 1;
+        grid-row-end: 2;
+       }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="items item-1">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items item-4">4</div>
+        <div class="items">5</div>
+    </div>
+
+    /* <!-- <main>
+        <div class="container">
+            <div class="item order-1">box1</div>
+            <div class="item order-2">box2</div>
+            <div class="item order-3">box3</div>
+            <div class="item order-4">box4</div>
+            <div class="item order-5">box5</div>
+            <div class="item">box1</div>
+            <div class="item">box2</div>
+            <div class="item">box3</div>
+            <div class="item">box4</div>
+            <div class="item">box5</div>
+            <div class="item">box1</div>
+            <div class="item">box2</div>
+            <div class="item">box3</div>
+            <div class="item">box4</div>
+            <div class="item">box5</div>
+            <div class="item">box1</div>
+            <div class="item">box2</div>
+            <div class="item">box3</div>
+            <div class="item">box4</div>
+            <div class="item">box5</div>
+            <div class="item">box1</div>
+            <div class="item">box2</div>
+            <div class="item">box3</div>
+            <div class="item">box4</div>
+            <div class="item">box5</div>
+            <div class="item">box1</div>
+            <div class="item">box2</div>
+            <div class="item">box3</div>
+            <div class="item">box4</div>
+            <div class="item">box5</div>
+        </div>
+    </main> --> */
+</body>
+</html>

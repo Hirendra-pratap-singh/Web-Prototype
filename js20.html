@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+
+border: 20px solid black;
+padding: 10px;
+}
+div>ul{
+
+border: 10px solid rgb(212, 160, 18);
+padding: 10px;
+
+}
+div>ul>li{
+
+border: 10px solid rgb(127, 7, 179);
+padding: 10px;
+}
+div>ul>li>span{
+display: block;
+border: 10px solid rgb(212, 10, 10);
+padding: 10px;
+
+}
+
+    </style>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <div>
+            <ul>
+                <li><span>hello1</span></li>
+                <li><span>hello1</span></li>
+                <li><span>hello1</span></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+
+        $(document).ready(function($){
+          //$(selector).action();
+          $('span').closest('div').css('border','10px solid black')
+        })
+    </script>
+</body>
+</html>

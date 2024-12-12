@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+  <style>
+    div.parent{
+
+         border: 2px solid red;
+        padding: 10px;
+        font-size: 3em;
+    }
+    .child{
+        border:1px solid green;
+        padding: 10px;
+    }
+    .grandchild{
+
+        border: 2px dashed blue;
+        padding: 10px;
+    }
+  </style>
+</head>
+<body>
+    
+    <div class="parent">
+        parent
+        <div class="child">
+            child1
+            <div class="grandchild">a_grandchild1_grandchild1</div>
+            <div class="grandchild">a_grandchild1_grandchild2</div>
+            <div class="grandchild">a_grandchild1_grandchild3</div>
+        </div>
+        <div class="child">
+            child2
+            <div class="grandchild">a_grandchild2_grandchild1</div>
+            <div class="grandchild">a_grandchild2_grandchild2</div>
+            <div class="grandchild">a_grandchild2_grandchild3</div>
+        </div>
+    </div>
+    <script>
+
+        (function($){
+           //alert('hi hello')
+           //var x=$('.grandchild').parent();
+           //console.log(x)
+           //x.css('color','yellow')
+           //x.css('border','2px solid yellow')
+           let y=$('.grandchild').parents();
+           y.css('border','2px solid red')
+        })(jQuery);
+
+
+    </script>
+</body>
+</html>

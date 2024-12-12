@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var r=document.createElement('header');
+        r.setAttribute("class","a_header")
+        r.innerHTML='header';
+        var m=document.createElement('div');
+        var f=document.createElement('footer');
+          m.setAttribute("class","dub")
+        console.log(f)
+        console.log(m)
+        console.log(r)
+        
+        document.body.appendChild(r)
+        document.body.appendChild(m)
+        document.body.appendChild(f)
+                
+        document.querySelector('header.a_header ~ div').setAttribute("class","a_main")
+        var x=document.getElementsByClassName('a_main');
+        //   console.log(x)
+        x[0].style.color='green';
+
+              document.querySelector('div').innerHTML='Main Area';
+              document.querySelector('div ~ footer').innerHTML='footer'
+           var b=document.createElement('button');
+                 b.innerHTML='click';
+                 console.log(b)
+                 document.body.appendChild(b);
+
+                 var be=document.getElementsByTagName('button')
+                 console.log(be[0])
+                 be[0].addEventListener('click',function(){
+
+                    alert('hello')
+                    r.style.color='orange';       
+                 })
+    </script>
+</body>
+</html>

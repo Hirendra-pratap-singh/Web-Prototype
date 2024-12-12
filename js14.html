@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="gp" id="grandParent">
+        grand parent
+        <div class="p">
+            parent
+            <div class="gc gc1">
+                child
+                <div class="gc gc2">
+                 grand child
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        p=document.getElementById('grandParent')
+        arr=p.querySelectorAll('.gc')
+
+        arr.forEach(function(currElement,index,arr){
+            
+            currElement.style.color='Orange';
+            console.log(currElement)
+
+        })
+
+        // console.log(p)
+        // p.querySelector('div.gc.gc1').style.color='yellow'
+        // p.querySelector('div.gc.gc2').style.color='blue'
+        // gc=document.querySelector('div.gc');
+        // console.log(gc)
+        // var x=gc.closest('div.gp').style.border='2px solid red'
+        // gc.closest('.p').style.border='2px solid green';
+        // gc.closest('.c').style.border='2px solid blue';
+        // console.log(x)
+        var p;
+        var arr;
+    </script>
+</body>
+</html>

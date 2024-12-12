@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+          
+          function setAttributeFromObject(element,obj){
+
+for(const key in obj){
+ // console.log(key)
+ // console.log(obj[key])
+ element.setAttribute(key,obj[key])
+}
+return element;
+}
+        function createMyElement(elem){
+
+            return document.createElement(elem)
+        }
+       var link=createMyElement('link')
+       var script=createMyElement('script')
+       var obj={
+       
+        "rel":"stylesheet",
+        "href":"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+
+       }
+       var myScriptObject={
+
+        "src":"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.j",
+        
+
+       }
+         
+       
+       //    console.log(obj)
+       //    var myarr=Array.from(obj)
+       //    console.log(myarr)
+       
+       
+       console.log(link);
+       
+       var link =setAttributeFromObject(link,obj)
+       var s=setAttributeFromObject(script,myScriptObject)
+   console.log(link)
+   console.log(s)
+   console.log(script)
+    //    link.setAttribute("href","https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css")
+    //    link.setAttribute("rel","stylesheet")
+    function appendToHead(elem){
+
+        document.head.append(elem)
+
+    }
+    appendToHead(link)
+    appendToHead(s)
+    //   document.head.appendChild(link)
+    //   document.head.appendChild(s)
+    var h=createMyElement('header')
+    var headerTop=createMyElement('div');
+    var headerBottom=createMyElement('div')
+    headerTop=setAttributeFromObject(headerTop,{"class":"a_headerTop"})
+     headerBottom=setAttributeFromObject(headerBottom,{"class":"a_headerBottom"})
+     headerTop.classList.add('container')
+     headerBottom.classList.add('container')
+    console.log(headerTop)
+    // h.setAttribute("class","a_header")
+    h=setAttributeFromObject(h,{"class":"a_header"})
+    console.log(h)
+    h.appendChild(headerTop)
+    h.appendChild(headerBottom)
+    document.body.append(h)
+    document.body.append(headerBottom)
+
+    select('.a_header').style.height='169px';
+    select('.a_header').style.border='2px solid red';
+     select('.a_headerTop').style.height='58px';
+    select('.a_headerTop').style.background='#184690';
+     select('.a_headerTop').style.border='2px solid #184690';
+     select('.a_headerBottom').style.height='111px';
+     select('.a_headerBottom').style.border='2px solid white'
+     select('.a_headerBottom').style.background='white'
+    function select(element){
+        return document.querySelector(element)
+    }
+
+    var t=document.createElement('footer');
+    var main=document.createElement('div')
+    main.setAttribute('class','a_main')
+    console.log(main)
+    
+    function appendToBody(elem){
+
+        document.body.appendChild(elem)
+    }
+    appendToBody(main)
+    appendToBody(t)
+    var myHeight={
+
+        backgroundColor:'blue',
+        height:'12255px'
+    }
+
+    function applyToElements(select,styleObject){
+      for(const key in styleObject){
+
+        // console.log(key)
+    
+    console.log(document.querySelector(select).style[key])
+    console.log(styleObject[key])
+    document.querySelector(select).style[key]=styleObject[key]
+      }
+    
+    
+    
+    }
+     
+    applyToElements('.a_main',myHeight)
+    //document.querySelector('.a_main').style.background='blue';
+    //document.querySelector('.a_main').style.height='12255px';
+    // document.body.appendChild(main)
+    // console.log(t)
+    //  document.body.appendChild(t)
+    document.querySelector('footer').setAttribute('class','myFooter')
+    var myStyle={
+      backgroundColor:"orange",
+      height:"3219px"
+
+    }
+    applyToElements('footer',myStyle);
+    </script>
+
+</body>
+</html>

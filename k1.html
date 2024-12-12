@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        @font-face {
+            font-family: 'cali';
+            src: url('./fonts/calibri-font-sv/calibri\ font\ sv/Calibri Regular/Calibri Regular.ttf') format('ttf');
+        }
+
+        body {
+            font-family: 'cali';
+        }
+
+        .a_cont_fluid {
+            height: 900px;
+            /* border: 1px solid red; */
+        }
+
+        .cont_row {
+
+            background-color: green;
+        }
+
+        .a_tbdr {
+            border: 1px solid black;
+        }
+
+        /*.cont_row>div:last-child */
+        .cont_row>div:nth-child(2) {
+            background-color: #442460;
+        }
+
+        .cont_row>div:first-child {
+            background-color: #fff;
+        }
+          .cont_row input[type='email']:focus{
+            /* border:none !important; */
+            box-shadow: none;
+          }
+          .cont_row input[type='password']:focus{
+            box-shadow: none;
+          }   
+          .a_clr{
+            color: #060a18;
+          }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid a_cont_fluid">
+        <div class="row cont_row h-100">
+            <div class="col-7  p-5">
+               <a href="#">
+                <img src="./img/logo.png" alt="kit">
+               </a>
+               <div class=" w-50 offset-3 text-center">
+               <h1>Welcome Back !</h1>
+               <p>Please login to your Ideal Insight account.</p>
+               <form class="text-start">
+                <div class="mb-3">
+                  
+                  <input type="email" class="form-control border-0 border-bottom rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email Id">
+                 
+                </div>
+                <div class="mb-3">
+
+                  <input type="password" class="form-control border-0 border-bottom rounded-0" id="exampleInputPassword1" placeholder="password">
+                </div>
+                <div class="mb-3 form-check">
+                    <div class="row">
+                        <div class="col">
+
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                          </div>
+                          <div class="col">
+                            <a href="#" class="a_clr">Forget Password</a>
+                          </div>
+                        </div>
+                    </div>
+                <button type="submit" class="btn btn-warning w-100 rounded-1">Submit</button>
+              </form>
+            </div>
+            </div>
+            <div class="col-5  p-0">B</div>
+
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

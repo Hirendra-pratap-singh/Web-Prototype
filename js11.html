@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+    <script>
+    </script>
+</head>
+<body id="a_body">
+    <script>
+        let a=document.createElement('header')
+        a.innerHTML='header'
+        console.log(a)
+        document.getElementById('a_body').appendChild(a)
+        document.querySelector('header').setAttribute('class','a_header')
+        document.body.style.margin='0px';
+        var x=document.getElementsByClassName('a_header')
+        //   console.log(x[0])
+        x[0].style.width='100%';
+        x[0].style.height='200px';
+        x[0].style.backgroundColor='red';
+        x[0].style.border='2px solid black';
+
+        var x=document.getElementsByTagName('header')
+        // console.log(x[0])
+        x[0].style.color='green';
+        x[0].style.fontSize='3em';
+        x[0].style.textAlign='center';
+        x[0].style.lineHeight='150px';
+
+        let f=document.createElement('footer')
+        let n=document.createElement('nav')
+        // console.log(f)
+        document.body.appendChild(n)
+        document.body.appendChild(f)
+        var x=document.querySelectorAll('footer');
+        x[0].setAttribute('data-foot','foot1');
+        document.querySelector('footer[data-foot="foot1"]').style.textAlign='center';
+        document.querySelector('[data-foot="foot1"]').style.color='blue';
+        document.querySelector('[data-foot]').style.lineHeight='150px';
+        
+        
+        var f1=document.querySelector('footer')
+        f1.innerHTML='footer';
+        f1.style.width='100%';
+        f1.style.height='150px';
+        f1.style.border='5px solid #333';
+
+        var aside1=document.createElement('aside');
+        aside1.innerHTML='Aside 1';
+        var section=document.createElement('section');
+        section.innerHTML='Section';
+        var aside2=document.createElement('aside');
+        aside2.innerHTML='Aside 2'; 
+
+        document.body.appendChild(aside1);
+        document.body.appendChild(section);
+        document.body.appendChild(aside2);  
+        
+        var arr=document.querySelectorAll('aside')
+        console.log(arr)
+        arr.forEach(function(currentValue,index,arr){
+
+         arr[index].style.display='inline-block';
+        });
+
+        document.querySelector('section').style.display=block;    </script>
+</body>
+</html>

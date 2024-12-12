@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="l1"></div>
+    <script>
+    //     var t=document.getElementById('l1')
+    //     var t1=document.getElementById('l2')
+
+    //   function hello(name,mycbf){
+           
+    //     console.log('Hello',name)
+    //     t.innerHTML='welcome in'+name
+    //     mycbf();
+    //     return 'hello'+name;
+    //     }
+    //     var x=hello('bhopal',function(response){
+    //          console.log('hello bhopal new',response)
+    //     })
+    //      t1.innerHTML=x
+
+    // function getSomeData(obj,cbf){
+    //      cbf(obj)
+
+    // }
+    // getSomeData({name:'yogesh',city:'khandwa'},function(response){
+    //     console.log(response)
+    // })
+    // function newWorld(obj,cbf){
+    //     cbf(obj)
+    // }
+    // newWorld({study:'graduate',college:'rgpv bhopal'},function(response){
+
+    //     console.log(response)
+    // })
+   
+    //   function setData(can,cbf){
+    //       cbf(can)
+    //   }
+    //   setData({address:'mp nagar bhopal',company:'ignito'},function(response){
+
+    //     console.log(response)
+    //     console.log(response.address)
+    //     console.log(response.company)
+    //   })
+
+    class MyClass{
+
+        getName(){
+
+            console.log('my api class')
+        }
+    }
+    let obj=new MyClass();
+    obj.getName();
+    
+    function getMyPhoto(url,method,cbf){
+    let xtl=new XMLHttpRequest();
+    xtl.open('GET',url)
+    xtl.send();
+    xtl.onload=function(response){
+         
+        console.log(xtl.responseText);
+        cbf(response)
+    }
+
+    // function getMyPhoto(url,cbf){
+    //     cbf(url)
+    }
+
+    // }
+    getMyPhoto('https://jsonplaceholder.typicode.com/photos','GET',function(response){
+        
+        console.log(typeof response)
+        console.log(response)
+        response=JSON.parse(response);
+        console.log(response)
+        console.log(typeof response)
+          
+        response.forEach((currary,index,arr) => {
+
+            console.log(currary)
+            console.log(typeof response)
+        });
+    })
+    </script>
+</body>
+</html>

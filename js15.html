@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        u=document.createElement('ul');
+        console.log(u)
+        for(let i=0;i<10;i++ ){
+            var li=document.createElement('li');
+            li.setAttribute('class','a_li')
+            li.classList.add('common')
+            //li.innerHTML='hello';
+            var tr=document.createTextNode('Hello'+i+1);
+            li.appendChild(tr)
+            console.log(tr)
+            u.appendChild(li)
+        }
+        document.body.appendChild(u)
+        var u;
+        var x=document.getElementsByClassName('common')
+        console.log(x)
+        console.log(typeof x)
+        for(var p in x){
+            console.log(!isNaN(p))
+            if(!isNaN(p) && (p<=3)|| (p>6)){
+
+                x[p].style.color='red';
+            }
+            console.log(x[p])
+        }
+        var ol={
+
+            "name":"anil",
+            "surname":"doller",
+            mission:"To ge the another chance",
+            getFullName:function(){
+             
+                return this.name+" "+this.surname
+            },
+            getMission:function(){
+             
+                return this.name+""+this.mission
+
+            }
+        }
+        console.log(ol.name)
+        console.log(ol["surname"])
+        console.log(ol.getFullName())
+        console.log(ol.getMission())
+    </script>
+</body>
+</html>

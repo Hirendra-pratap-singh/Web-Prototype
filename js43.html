@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            background-color: black;
+        }
+
+        .container {
+
+            height: 400px;
+            width: 400px;
+            margin: auto;
+            
+            text-align: center;
+
+
+        }
+    </style>
+    <script>
+
+        //    function clickMe(state){
+
+        //     alert(state);
+
+        //     document.body.style.backgroundColor='yellow';
+
+
+        //    }        
+
+        function clickMe(state) {
+
+            //      document.body.style.backgroundColor='black';
+            //     }
+
+            if (state == 'on') {
+
+                document.body.style.backgroundColor = 'yellow';
+                document.getElementById('myimg').setAttribute('src', 'img/bulb2.png');
+            } else {
+
+                document.body.style.backgroundColor = 'black';
+                document.getElementById('myimg').setAttribute('src', 'img/bulb1.png')
+
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <img id="myimg" src="img/bulb1.png" width="200px" alt="stylesheet">
+        <button onclick="clickMe('on')">ON</button>
+        <button onclick="clickMe('off')">OFF</button>
+
+    </div>
+    <script>
+
+
+
+    </script>
+
+
+</body>
+
+</html>

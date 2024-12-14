@@ -5,17 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+
+            height: 50px;
+            width: 50px;
+            background-color: beige;
+            border: 2px solid black;
+            transform-origin: 32% -0%;
+             transform: rotate(0.25turn); 
+          /* transform: rotateZ(95deg); */
+          /* transform: translateY(100px) skewX(40deg) translateX(360%); */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid purple;
+        }
 
     </style>
 </head>
 <body>
-    <div id="a1">Hello</div>
+
+            <div class="container">
+                <div class="box">
+                   box
+                </div>
+            </div>
+
+    <!-- <div id="a1">Hello</div>
     <div class="a2">Inter</div>
     <script>
         document.getElementById('a1').innerHTML="welcome in bhopal";
         document.getElementsByClassName('.a2').innerHTML="Om namah Shivay"
         console.log(5+5)
         console.log(10/2)
-    </script>
+    </script> -->
 </body>
 </html>
